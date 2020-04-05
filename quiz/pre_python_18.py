@@ -14,3 +14,11 @@ print(new_list)
 ['exit', 'hi', 'playdata', 'intro']
 
 """
+
+file = ['exit.py', 'hi.py', 'playdata.hwp', 'intro.jpg']
+
+for idx, val in enumerate(file):
+    TEMP = val.split('.')  # 'exit' / 'py'
+    file[idx] = TEMP[0]
+
+print(file)

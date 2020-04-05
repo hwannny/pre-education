@@ -1,4 +1,4 @@
-'''
+"""
 1.
 문자열의 역순이 문자열과 동일하면 팰린드롬이라고 한다.
 예를 들어, "토마토"는 팰린드롬이지만, "radio"는 팰린드롬이 아니다.
@@ -12,4 +12,18 @@ print(is_palindrome("토마토"))
 <출력>
 False
 True
-'''
+"""
+
+
+def is_palindrome(string):  # 토 마 토
+    listA = list(string)
+
+    for i in range(len(listA) // 2):
+        if listA[i] == listA[len(listA) - 1 - i]:
+            return True
+        else:
+            return False
+
+
+print(is_palindrome("radio"))
+print(is_palindrome("토마토"))

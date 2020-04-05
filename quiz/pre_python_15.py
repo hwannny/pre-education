@@ -8,3 +8,16 @@
 <출력>
 남자
 """
+
+residentNumber = input('주민등록번호 : ')
+splitString = residentNumber.split('-')
+
+if splitString[1][0:1] == '1' or splitString[1][0:1] == '3':
+    print('남자')
+
+elif splitString[1][0:1] == '2' or splitString[1][0:1] == '4':
+    print('여자')
+
+else:
+    print('입력오류')
+

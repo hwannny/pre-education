@@ -15,3 +15,26 @@ score : 88
 A
 
 """
+
+score = int(input('score : '))
+
+if score > 100:
+    print('잘몬된 입력입니다.')
+
+elif score > 80:
+    print('A')
+
+elif score > 60:
+    print('B')
+
+elif score > 40:
+    print('C')
+
+elif score > 20:
+    print('D')
+
+elif score > 0:
+    print('f')
+
+else:
+    print('잘못된 입력입니다.')

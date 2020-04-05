@@ -1,4 +1,4 @@
-'''
+"""
 3.
 Card 클래스를 생성해 카드에 충전기능, 소비기능, 잔액을 알려주는 기능을 넣으시오.
 -충전기능 (charge)
@@ -21,4 +21,34 @@ card.print()
 영화관에서 8000원 사용했습니다.
 잔액이 부족합니다
 잔액이 9000원 입니다.
-'''
+"""
+
+
+class Card:
+
+    def print(self):
+        print('잔액이 {}원 입니다.'.format(self.money))
+
+    def charge(self, money):
+        self.money = money
+        self.print()
+
+    def consume(self, payMoney, place):
+        if self.money < payMoney:
+            print('잔액이 부족합니다.')
+
+        elif place == '영화관':
+            dcPayMoney = int(payMoney * 80 / 100)
+            self.money = self.money - dcPayMoney
+            print('{}에서 {}원 사용했습니다.'.format(place, dcPayMoney))
+        else:
+            self.money = self.money - payMoney
+            print('{}에서 {}원 사용했습니다.'.format(place, payMoney))
+
+
+card = Card()
+card.charge(20000)
+card.consume(3000, '마트')
+card.consume(10000, '영화관')
+card.consume(13000, '마트')
+card.print()

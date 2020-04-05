@@ -1,4 +1,4 @@
-'''
+"""
 2.
 첫 번째 숫자를 두 번째 숫자부터 마지막 숫자까지 차례대로 비교하여
 가장 작은 값을 찾아 첫 번째에 놓고,  두번째 숫자를 세 번째 숫자부터
@@ -13,4 +13,22 @@ print(select_sort(list))
 <출력>
 [1, 2, 3, 6, 7, 8, 10, 21]
 
-'''
+"""
+
+
+def select_sort(listP):
+    n = len(listP)
+
+    for i in range(0, n - 1):
+        minLoc = i
+        for j in range(i + 1, n):
+            if listP[j] < listP[minLoc]:
+                minLoc = j
+        listP[i], listP[minLoc] = listP[minLoc], listP[i]
+
+    return listP
+
+
+listA = [6, 2, 3, 7, 8, 10, 21, 1]
+
+print(select_sort(listA))

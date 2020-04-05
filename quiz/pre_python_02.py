@@ -10,3 +10,22 @@
 <출력>
 150
 """
+
+number1 = int(input('첫 번째 수를 입력하세요 : '))
+number2 = int(input('두 번째 수를 입력하세요 : '))
+operation = input('어떤 연산을 하실 건가요? : ')
+
+if operation == '+':
+    print(number1+number2)
+
+elif operation == '-':
+    print(number1 - number2)
+
+elif operation == '*':
+    print(number1 * number2)
+
+elif operation == '/':
+    print(number1 / number2)
+
+else:
+    print('연산자 입력 오류')

@@ -5,3 +5,14 @@
 <출력>
  45
 """
+# 기준 수
+baseNumber = 1000
+sumNumber = 0
+
+for i in range(1, 101):
+    sumNumber = sumNumber + i
+    if sumNumber > 1000:
+        num = i
+        break
+
+print(num)

@@ -19,3 +19,12 @@ HELLO
 입력 형식이 잘못되었습니다.
 
 """
+
+A = input('문자열 입력 : ')
+
+if A.isalpha():
+    print(A.swapcase())
+
+else:
+    print('입력 형식이 잘못되었습니다.')
+
